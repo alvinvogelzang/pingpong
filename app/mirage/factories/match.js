@@ -2,8 +2,8 @@
 import Mirage, {faker} from 'ember-cli-mirage';
 
 export default Mirage.Factory.extend({
-  team_a_id: 1,
-  team_b_id: 2,
-  score_team_a: faker.random.number({'max': 21, 'min': 0}),
-  score_team_b: faker.random.number({'max': 21, 'min': 0}),
+  teamAId: 1,
+  teamBId: 2,
+  scoreTeamA() { return faker.random.number({min: 0, max: 21})},
+  scoreTeamB() { return faker.random.number({min: 0, max: 21})},
 });

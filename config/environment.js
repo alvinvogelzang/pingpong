@@ -20,11 +20,12 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    // Only change this line to switch between mirage/backend
+    const useMirage = true;
+
+    // Can't touch this, Hammertime
+    ENV['ember-cli-mirage'] = { enabled: useMirage };
+    if (!useMirage) ENV.API_HOST = 'http://backend.com';
   }
 
   if (environment === 'test') {
