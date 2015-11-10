@@ -1,3 +1,9 @@
 <h2>Matches overview</h2>
 
+<ul>
+  {{#each matches as |match|}}
+    {{dashboard/match-component match=match}}
+  {{/each}}
+</ul>
+
 {{yield}}
