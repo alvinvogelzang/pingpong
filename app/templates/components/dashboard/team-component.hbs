@@ -1,3 +1,12 @@
-<h3>Team</h3>
+<h3>{{team}}</h3>
+{{view "select" 
+  content=teams
+  optionValuePath="content.id"
+  optionLabelPath="content.name"
+  value=selectedTeam
+  prompt="Please select a team"}}
+
 <h4>Score</h4>
+{{input type="number"}}
+
 {{yield}}
